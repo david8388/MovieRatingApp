@@ -1,13 +1,13 @@
 <template>
   <v-app id="inspire">
     <v-navigation-drawer
-      fixed
       v-model="drawer"
+      fixed
       app
     >
       <v-list dense>
         <router-link
-          v-bind:to="{ name: 'Home' }"
+          :to="{name:'Home'}"
           class="side_bar_link"
         >
           <v-list-tile>
@@ -18,7 +18,7 @@
           </v-list-tile>
         </router-link>
         <router-link
-          v-bind:to="{ name: 'Contact' }"
+          :to="{name: 'Contact'}"
           class="side_bar_link"
         >
           <v-list-tile>
@@ -36,37 +36,13 @@
       fixed
       app
     >
-      <v-toolbar-side-icon @click.stop="drawer = !drawer">
-      </v-toolbar-side-icon>
-      <v-toolbar-title>Home</v-toolbar-title>
     </v-toolbar>
-    <v-content>
-      <v-container fluid>
-        <div id="app">
-          <router-view />
-        </div>
-      </v-container>
-    </v-content>
-    <v-footer
-      color="indigo"
-      app
-    >
-      <span class="white--text">&copy; 2018</span>
-    </v-footer>
   </v-app>
-  <!-- <router-view /> -->
 </template>
 
 <script>
-// remember to npm install sass-loader node-sass --save-dev to prevent error
-// https://webpack.docschina.org/loaders/sass-loader/
-
-// npm install bootstrap bootstrap-vue vuetify --save
 import '@/assets/stylesheets/main.scss'
 
-// export default {
-//   name: 'App'
-// }
 export default {
   data: () => ({
     drawer: null
