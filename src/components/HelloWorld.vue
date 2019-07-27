@@ -1,7 +1,7 @@
 <template>
-  <div>
-    HelloWorld
-  </div>
+  <v-layout>
+    this is home
+  </v-layout>
 </template>
 
 <script>
